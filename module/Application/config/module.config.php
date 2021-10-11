@@ -54,6 +54,13 @@ return array(
             ),
         ),
     ),
+    'bjyauthorize' => array(
+        'guards' => array(
+            \BjyAuthorize\Guard\Route::class => array(
+                array('route' => 'home', 'roles' => array('guest', 'user')),
+            ),
+        ),
+    ),
     'service_manager' => array(
         'abstract_factories' => array(
             'Zend\Cache\Service\StorageCacheAbstractServiceFactory',
